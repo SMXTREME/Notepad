@@ -5,12 +5,15 @@ import java.util.Objects;
 
 public class Function_Theme {
     GUI gui;
+    String currentTheme;
 
     public Function_Theme(GUI gui) {
         this.gui = gui;
     }
 
     public void changeTheme(String theme) {
+        currentTheme = theme;
+
         switch (theme) {
             case "Light" -> {
                 gui.window.getContentPane().setBackground(Color.white);

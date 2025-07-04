@@ -47,6 +47,16 @@ public class KeyHandler implements KeyListener {
             if (newFontSize >= 8) {
                 gui.format.fontSizeFormat(newFontSize);
             }
+        } else if (e.isControlDown() && e.getKeyCode() == KeyEvent.VK_T) {
+            String currentTheme = gui.theme.currentTheme;
+            switch (currentTheme) {
+                case "Dark" -> {
+                    gui.theme.changeTheme("Light");
+                }
+                case "Light" -> {
+                    gui.theme.changeTheme("Dark");
+                }
+            }
         }
     }
 
